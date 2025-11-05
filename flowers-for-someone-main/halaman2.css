@@ -1,0 +1,146 @@
+/* Background romantis dengan animasi hati */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle at center, #ffe6eb, #ffc1cc, #ff99aa);
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Animasi hati jatuh */
+@keyframes falling-hearts {
+  0% {
+    transform: translateY(-10%) scale(0.8) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) scale(1.2) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Membuat beberapa hati bergerak */
+.heart {
+  position: absolute;
+  color: #ff4d6d;
+  font-size: 24px;
+  animation: falling-hearts 6s linear infinite;
+  opacity: 0.8;
+}
+
+/* Variasi posisi hati */
+.heart:nth-child(1) { left: 10%; animation-duration: 8s; font-size: 20px; }
+.heart:nth-child(2) { left: 30%; animation-duration: 10s; font-size: 26px; }
+.heart:nth-child(3) { left: 50%; animation-duration: 7s; font-size: 18px; }
+.heart:nth-child(4) { left: 70%; animation-duration: 9s; font-size: 30px; }
+.heart:nth-child(5) { left: 85%; animation-duration: 11s; font-size: 22px; }
+
+.container {
+  text-align: center;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: monospace;
+  color: #d81b60;
+  text-shadow: 2px 2px 10px rgba(255, 182, 193, 0.7);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Efek berdenyut untuk tombol romantis */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.yes-button, .no-button {
+  font-size: 1.3em;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.yes-button {
+  background: linear-gradient(45deg, #ff80ab, #f50057);
+  animation: heartbeat 1.5s infinite;
+}
+
+.no-button {
+  background: linear-gradient(45deg, #ff5252, #e53935);
+}
+
+.yes-button:hover, .no-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+}
+  
+.gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* ❄️ Efek Salju */
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* agar tidak ganggu klik tombol */
+  overflow: hidden;
+  z-index: 10;
+}
+
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Bentuk bulatan putih halus */
+.snow {
+  position: absolute;
+  top: 0;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation-name: fall;
+  animation-timing-function: linear;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(100vh) translateX(20px);
+  }
+}

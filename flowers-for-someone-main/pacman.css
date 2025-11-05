@@ -1,0 +1,38 @@
+:root{--bg:#0b1221;--wall:#10243a;--pellet:#ffd966;--pac:#ffd11a;--ghost:#ff5c5c}
+    html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    body{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#071226,#0b1221);color:#fff}
+    .game-wrap{width:640px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    header h1{font-size:18px;margin:0}
+    #score{font-weight:700}
+    canvas{display:block;background:var(--bg);border-radius:8px}
+    .overlay{position:relative}
+    .modal{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(3,6,12,0.6);backdrop-filter:blur(3px);visibility:hidden;opacity:0;transition:opacity .25s,visibility .25s}
+    .modal.show{visibility:visible;opacity:1}
+    .card{background:#071126;padding:22px;border-radius:10px;min-width:360px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .card h2{margin:0 0 10px 0;font-size:20px}
+    .card p{margin:0 0 18px 0;color:#c8d0e0}
+    .btns{display:flex;gap:12px;justify-content:center}
+    .btn{padding:10px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:700}
+    .btn.yes{background:#1b9a74;color:white}
+    .btn.no{background:#283642;color:#fff}
+    .small{font-size:12px;color:#9fb0c8;margin-top:8px}
+    footer{margin-top:10px;font-size:12px;color:#9fb0c8}
+    .hint{font-size:13px;color:#bcd2ff}
+
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 182, 193, 0.9), rgba(233, 30, 99, 0.8));
+  backdrop-filter: blur(40px);
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all 1s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.page-transition.active {
+  opacity: 1;
+  transform: scale(1);
+}

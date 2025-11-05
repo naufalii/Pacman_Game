@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pacman Sederhana</title>
+  <link rel="stylesheet" href="pacman.css">
+</head>
+<body>
+    <div class="page-transition"></div>
+  <div class="game-wrap">
+    <header>
+      <h1>Pacman Sederhana</h1>
+      <div><span id="score">Score: 0</span></div>
+    </header>
+
+    <div class="overlay">
+      <canvas id="game" width="608" height="608"></canvas>
+
+      <div id="modal" class="modal">
+        <div class="card">
+          <h2>Kamu kalah 😢</h2>
+          <p>Apakah kamu mau lanjut atau mencoba game lain yang lebih seruu?</p>
+          <div class="btns">
+            <button id="yesBtn" class="btn yes">Iya</button>
+            <button id="noBtn" class="btn no">Tidak</button>
+          </div>
+          <div class="small">Klik "Iya" kita akan masuk ke game yang lebih seruu ✨</div>
+        </div>
+      </div>
+    </div>
+
+    <footer><div class="hint">Kontrol: Panah / WASD — Makan semua titik untuk menang. Ketemu hantu = kalah.</div></footer>
+  </div>
+  <script src="pacman.js"></script>
+</body>
+</html>
